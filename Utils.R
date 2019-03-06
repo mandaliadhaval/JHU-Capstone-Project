@@ -28,9 +28,9 @@ start_time <- Sys.time()
 #+ DataLoading
 
 #' English Repository Files
-blogs_file   <- "Resources/corpus/en_US/en_US.blogs.txt"
-news_file    <- "Resources/corpus/en_US/en_US.news.txt"
-twitter_file <- "Resources/corpus/en_US/en_US.twitter.txt"  
+blogs_file   <- "final/en_US/en_US.blogs.txt"
+news_file    <- "final/en_US/en_US.news.txt"
+twitter_file <- "final/en_US/en_US.twitter.txt"  
 
 #' File Sizes (Mb)
 blogs_size   <- file.size(blogs_file) / (2^20)
@@ -108,7 +108,7 @@ repo_sample$source <- as.factor(repo_sample$source)
 #' Create filters: stopwords, profanity, non-alphanumeric's, url's, repeated letters(+3x)
 #+ DataCleaning
 data("stop_words")
-swear_words <- read_delim("./Resources/config/en_US/Profanity.txt", delim = "\n", col_names = FALSE)
+swear_words <- read_delim("./final/en_US/Profanity.txt", delim = "\n", col_names = FALSE)
 swear_words <- unnest_tokens(swear_words, word, X1)
 replace_reg <- "[^[:alpha:][:space:]]*"
 replace_url <- "http[^[:space:]]*"
