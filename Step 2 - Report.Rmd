@@ -17,7 +17,7 @@ This document summarizes work done to construct, test and optimize a model for t
 
 A body of sample texts consisting of ~4M documents including tweets, news articles and blog posts are loaded and exploratory analysis performed. Sets of n-grams are extracted from the body of text, predictive algorithms built, and various approaches for improving predictive accuracy refined. 
 
-A cursory analysis of the dataset was presented in the [https://github.com/pchuck/coursera-ds-capstone/blob/master/milestone.md](Milestone 1) report.
+A cursory analysis of the dataset was presented in the [https://github.com/mandaliadhaval/JHU-Capstone-Project/blob/master/Milestone_Project.md](Milestone 1) report.
 
 This is the final capstone project for the Johns Hopkins data science specialization certification series. The corpus for the analysis is available at [Capstone Dataset](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip).
 

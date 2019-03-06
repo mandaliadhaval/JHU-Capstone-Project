@@ -1,0 +1,53 @@
+Swiftkey Text Prediction
+========================================================
+author: Dhaval Mandalia
+date: 6 March, 2019
+autosize: true
+
+
+Approach
+========================================================
+
+A body of [sample texts](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip) consisting of ~4M documents including tweets, news articles and blog posts are loaded and exploratory analysis performed. Sets of n-grams are extracted from the corpus, predictive algororithms built, and various methods for improving predictive accuracy explored and refined.
+
+Optimization
+========================================================
+
+* 4M to 1M document reduction via random sampling
+* 1M documents transformed and reduced
+* Iterative process of analysis, optimization and perf testing
+* Document-term matrices generated with {1-5}-ngrams
+* n-grams organized by frequency of occurrence in corpus
+* Least common n-grams pruned/dropped for final model..
+    * 18,936 words occurring more than 10x
+    * 199,966 2-grams w/ frequency > 3x
+    * 150,489 3-grams w/ frequency > 3x
+    * 139,984 4-grams w/ frequency > 2x
+    * 43,024 5-grams w/ frequency > 2x
+
+Prediction Algorithm
+========================================================
+
+* Capture input text, including all preceding words in the phrase
+* Iteratively traverse n-grams (longest to shortest) for matches
+* On match(es), use the longest, most common, n-gram
+* Last word in the matching n-gram is the predicted next word
+* If no match in {5, 4, 3, 2}-grams, resort to randomly selecting a most frequently occurring 1-gram (e.g. common word)
+
+Application
+========================================================
+
+[Text-Predictor-App](https://mandaliadhaval.shinyapps.io/Word_Predictor_App/)
+interactively performs word/phrase completion!
+
+Glossary
+========================================================
+## Performance
+* **15%** Accuracy (using only first, top-ranked response)
+* **22%** Accuracy (selecting from top-5 ranked responses)
+* Mean Response Time: **250ms**
+* Memory: **9MB** compressed, **104MB** in-memory
+
+## Links
+* [github repository](https://github.com/mandaliadhaval/JHU-Capstone-Project) - Full Project
+* [milestone 1](http://rpubs.com/mandaliadhaval/swiftkey_milestone) - cursory analysis

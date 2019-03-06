@@ -1,0 +1,12 @@
+name: Word_Predictor_App
+title: Word_Predictor_App
+username:
+account: mandaliadhaval
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 769235
+bundleId: 1919254
+url: https://mandaliadhaval.shinyapps.io/Word_Predictor_App/
+when: 1551864717.68515
+asMultiple: FALSE
+asStatic: FALSE

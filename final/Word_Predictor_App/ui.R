@@ -14,7 +14,7 @@ shinyUI(navbarPage("Text Predictor",
                             fluidRow(
                               column(4,
                                      h3('Input'), 
-                                     tags$textarea(id="text_in", rows=3, cols=30),
+                                     tags$textarea(id="text_in", rows=6, cols=60),
                                      h4('Prediction Parameters'), 
                                      sliderInput("suggestions", "Word Suggestions", 
                                                  value=1.0, min=1.0, max=5.0, step=1.0)
